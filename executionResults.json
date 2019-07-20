@@ -1,0 +1,120 @@
+[
+  {
+    "description": "Register users with data from Excel File",
+    "assertions": [
+      {
+        "passed": true
+      },
+      {
+        "passed": true
+      },
+      {
+        "passed": true
+      },
+      {
+        "passed": true
+      }
+    ],
+    "events": [
+      {
+        "emitterEvent": "testPass",
+        "name": "Given I navigate to the page \"RegistrationUsersUrl\"",
+        "category": "Create users in the website http://newtours.demoaut.com/index.php: Register users with data from Excel File",
+        "durationMillis": 3,
+        "sourceLocation": {
+          "filePath": "cucumber/features/RegisterUsers.feature",
+          "line": 5,
+          "column": 2
+        },
+        "progress": {
+          "step": 1,
+          "steps": 3
+        }
+      },
+      {
+        "emitterEvent": "testPass",
+        "name": "When I register users with the data of the excel file",
+        "category": "Create users in the website http://newtours.demoaut.com/index.php: Register users with data from Excel File",
+        "durationMillis": 22006,
+        "sourceLocation": {
+          "filePath": "cucumber/features/RegisterUsers.feature",
+          "line": 6,
+          "column": 2
+        },
+        "progress": {
+          "step": 2,
+          "steps": 3
+        }
+      },
+      {
+        "emitterEvent": "testPass",
+        "name": "Then The users are created correctly",
+        "category": "Create users in the website http://newtours.demoaut.com/index.php: Register users with data from Excel File",
+        "durationMillis": 5194,
+        "sourceLocation": {
+          "filePath": "cucumber/features/RegisterUsers.feature",
+          "line": 7,
+          "column": 2
+        },
+        "progress": {
+          "step": 3,
+          "steps": 3
+        }
+      }
+    ],
+    "emitToTestRunner": [
+      [
+        "testPass",
+        {
+          "name": "Given I navigate to the page \"RegistrationUsersUrl\"",
+          "category": "Create users in the website http://newtours.demoaut.com/index.php: Register users with data from Excel File",
+          "durationMillis": 3,
+          "sourceLocation": {
+            "filePath": "cucumber/features/RegisterUsers.feature",
+            "line": 5,
+            "column": 2
+          },
+          "progress": {
+            "step": 1,
+            "steps": 3
+          }
+        }
+      ],
+      [
+        "testPass",
+        {
+          "name": "When I register users with the data of the excel file",
+          "category": "Create users in the website http://newtours.demoaut.com/index.php: Register users with data from Excel File",
+          "durationMillis": 22006,
+          "sourceLocation": {
+            "filePath": "cucumber/features/RegisterUsers.feature",
+            "line": 6,
+            "column": 2
+          },
+          "progress": {
+            "step": 2,
+            "steps": 3
+          }
+        }
+      ],
+      [
+        "testPass",
+        {
+          "name": "Then The users are created correctly",
+          "category": "Create users in the website http://newtours.demoaut.com/index.php: Register users with data from Excel File",
+          "durationMillis": 5194,
+          "sourceLocation": {
+            "filePath": "cucumber/features/RegisterUsers.feature",
+            "line": 7,
+            "column": 2
+          },
+          "progress": {
+            "step": 3,
+            "steps": 3
+          }
+        }
+      ]
+    ],
+    "duration": 27992
+  }
+]

@@ -1,0 +1,113 @@
+{
+  "name": "cucumber-node-html-reporter.ui-tests",
+  "version": "0.0.1",
+  "description": "Generate beautifull cucumberjs reports for multiple instances (browsers / devices)",
+  "keywords": [
+    "cucumber",
+    "html",
+    "test report",
+    "multiple-cucumber-html-reporter",
+    "html report",
+    "json to html"
+  ],
+  "main": "lib/generate-report.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "debug": "node --inspect-brk=9229 ./test/test.js",
+    "startWebDriver": "webdriver-manager update --versions.chrome '75.0.3770.90' --versions.standalone '3.141.59'",
+    "stopWebdriver": "webdriver-manager shutdown",
+    "protractorWithWebDriver": "protractor protractor.conf.js",
+    "getStepsSnippetsWithCucumber": "npx cucumber-js --format 'snippets' --format-options '{\"snippetInterface\": \"synchronous\"}'",
+    "getStepsSnippetsWithProtractor": "protractor protractor.conf.snippets.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://yon_cuadrado@bitbucket.org/yon_cuadrado/cucumber-node-html-reporter.git"
+  },
+  "author": "yon cuadrado",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "exceljs": "^1.13.0",
+    "jshint": "2.10.2",
+    "protractor": "^5.4.2"
+  },
+  "devDependencies": {
+    "cucumber": "5.1.0",
+    "protractor-cucumber-framework": "^6.1.3"
+  },
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "test"
+  },
+  "license": "ISC",
+  "jshintConfig": {
+    "node": true,
+    "mocha": true,
+    "browser": true,
+    "esversion": 9,
+    "expr": true,
+    "globals": [
+      "by",
+      "element",
+      "browser"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "mocha": true
+    },
+    "extends": [
+      "standard",
+      "plugin:protractor/recommended"
+    ],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018
+    },
+    "rules": {
+      "semi": [
+        2,
+        "always"
+      ],
+      "indent": [
+        "error",
+        4
+      ],
+      "no-unused-expressions": 0,
+      "chai-friendly/no-unused-expressions": 2
+    },
+    "plugins": [
+      "chai-friendly",
+      "protractor"
+    ]
+  },
+  "nyc": {
+    "sourceMap": false,
+    "instrument": false,
+    "cache": false,
+    "check-coverage": true,
+    "reporter": [
+      "html",
+      "text",
+      "lcov"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "all": false,
+    "include": [
+      "lib**"
+    ],
+    "exclude": [
+      "**/*.test.js",
+      "**/node_modules/**"
+    ]
+  }
+}
